@@ -20,7 +20,7 @@ const authenticateJWT = (req, res, next) => {
     next();
   } catch (error) {
     console.log("error", error);
-    res.status(401).json({ message: "Access token is missing or invalid" });
+    res.status(403).json({ message: "Access token is missing or invalid" });
   }
 };
 
